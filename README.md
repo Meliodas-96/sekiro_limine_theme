@@ -139,8 +139,15 @@ wallpaper_style: stretched
 interface_branding: Sekiro
 interface_branding_colour: b14046
 interface_help_colour: b14046
+interface_help_colour_bright: f0a0a0
 term_background: 80000000
 term_foreground: ffffff
+term_background_bright: 40000000
+term_foreground_bright: ffffff
+term_margin: 64
+term_margin_gradient: 8
+term_palette: 120b0b;8f1d2c;5f6b3a;b8863b;3e4b6b;7d3152;557a78;d8c9b0
+term_palette_bright: 4d4141;d94b5b;93a85b;e0b85c;6477a8;bd5e8a;7da9a2;fff4dc
 # END SEKIRO LIMINE THEME
 ```
 
@@ -153,8 +160,13 @@ Estas opciones son opciones globales documentadas por Limine:
 - `interface_branding` muestra el nombre del tema en la interfaz.
 - `interface_branding_colour` cambia el color del branding.
 - `interface_help_colour` cambia el color de los textos de ayuda.
+- `interface_help_colour_bright` cambia el color brillante de la cuenta atrás.
 - `term_background` aplica transparencia al fondo del terminal gráfico.
 - `term_foreground` define el color principal del texto.
+- `term_background_bright` y `term_foreground_bright` controlan los colores brillantes.
+- `term_margin` y `term_margin_gradient` integran el panel del menú sobre el fondo.
+- `term_palette` y `term_palette_bright` sustituyen la paleta básica por tonos oscuros,
+  rojos y dorados inspirados en Sekiro.
 
 Si la resolución solicitada no está disponible en el firmware, Limine elegirá
 automáticamente otra resolución compatible.
