@@ -153,7 +153,9 @@ rollback() {
 trap rollback ERR
 
 mkdir -p -- "$THEME_DIR"
-cp -a -- "${SOURCE_DIR}/${BACKGROUND}" "$THEME_DIR/${BACKGROUND}"
+# EFI/FAT volumes do not support preserving Unix ownership. A plain copy is
+# intentional here; the bootloader only needs to read the image.
+cp -- "${SOURCE_DIR}/${BACKGROUND}" "$THEME_DIR/${BACKGROUND}"
 
 remove_theme_block "$CONFIG_PATH"
 tmp_config="$(mktemp)"
